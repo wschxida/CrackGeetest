@@ -179,18 +179,18 @@ class CrackGeetest():
         print('登录成功')
     
     def crack(self):
-        # 输入用户名密码
-        self.open()
-        # 点击验证按钮
-        button = self.get_geetest_button()
-        button.click()
-        # 获取验证码图片
-        image1 = self.get_geetest_image('captcha1.png')
-        # 点按呼出缺口
-        slider = self.get_slider()
-        slider.click()
-        # 获取带缺口的验证码图片
-        image2 = self.get_geetest_image('captcha2.png')
+        # # 输入用户名密码
+        # self.open()
+        # # 点击验证按钮
+        # button = self.get_geetest_button()
+        # button.click()
+        # # 获取验证码图片
+        # image1 = self.get_geetest_image('captcha1.png')
+        # # 点按呼出缺口
+        # slider = self.get_slider()
+        # slider.click()
+        # # 获取带缺口的验证码图片
+        # image2 = self.get_geetest_image('captcha2.png')
         # 获取缺口位置
         gap = self.get_gap(image1, image2)
         print('缺口位置', gap)
